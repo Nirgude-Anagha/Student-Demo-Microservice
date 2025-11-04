@@ -1,0 +1,18 @@
+package com.example.studentdemo.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class StudentDTO {
+    private Long studentId;
+    private String name;
+    private String location;
+    private String email;
+    private String mobileNo;
+}
