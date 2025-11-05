@@ -2,6 +2,7 @@ package com.example.studentdemo.controller;
 
 import com.example.studentdemo.dto.StudentDTO;
 import com.example.studentdemo.service.StudentService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,7 @@ public class StudentController {
     private StudentService studentService;
 
     @PostMapping()
-    public ResponseEntity<StudentDTO> saveStudent(@RequestBody StudentDTO studentDTO) {
+    public ResponseEntity<StudentDTO> saveStudent(@Valid @RequestBody StudentDTO studentDTO) {
         return ResponseEntity.status(HttpStatus.CREATED).body(studentService.save(studentDTO));
     }
 

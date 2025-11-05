@@ -9,5 +9,5 @@ import java.util.Optional;
 @Repository
 public interface StudentRepository extends JpaRepository<Student,Long> {
 
-    public Optional<Student> findByMobileNo(String  mobileNo);
+    Optional<Student> findByMobileNo(String  mobileNo);
 }
